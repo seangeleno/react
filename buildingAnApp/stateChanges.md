@@ -23,4 +23,24 @@ class CommentBox extends React.Component {
   }
 }
 ```
-The state is a JS object that lives inside each cmoponent. We can access it via --this.state--
+The state is a JS object that lives inside each component. We can access it via __this.state__
+
+# Hiding Comments on the Initial State
+
+###  CONSTRUCTORS STARTs WITH SUPER();
+```javascript
+class CommentBox extends React.Component {
+  constructor(){
+    super();
+
+    this.state = {
+      showComments: false;
+    }
+  }
+}
+```
+# State represents data that changes over time
+
+# We update state by calling *this.setState()*
+
+# We declare an initial state in the component constructor

@@ -1,13 +1,23 @@
 class CommentBox extends React.Component {
   render() {
     const comments = this._getComments() || [];
-    return(
+    let commentNodes;
+    if (this.state.showComments) {
+      commentNodes = <div className="comment-list">{comments}</div>;
+    }
+  /*  return(
       <div className="comment-box">
         <h3>Comments</h3>
         <h4 className="comment-count">{comments.length} comments</h4>
         <div className="comment-list">
           {comments}
         </div>
+      </div>
+    );*/
+    return(
+      <div className="comment-box">
+        <h4 className="h4">{this._getCommentsTitle(comments.length)}</h4>
+        { commentNodes }
       </div>
     );
   }
